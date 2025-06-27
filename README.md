@@ -7,7 +7,7 @@ It allows users to manage tasks efficiently — with added features like **task 
 ---
 
 ## 🚀 Live Demo  
-👉 [Click here to try it out](https://your-live-link.com)
+👉 [Click here to try it out](https://simptodo.netlify.app/)
 
 ---
 
