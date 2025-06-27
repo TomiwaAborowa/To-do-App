@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro - HTML TODO App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>TaskMaster Pro</h1>
+            <p>A powerful todo app with priorities and analytics</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('tasks')">Tasks</button>
+            <button class="tab-btn" onclick="showTab('analytics')">Analytics</button>
+        </div>
+
+        <!-- Tasks Tab Content -->
+        <div id="tasks-tab" class="tab-content active">
+            <!-- Add Task Form -->
+            <div class="add-task-form">
+                <h2>Add New Task</h2>
+                <div class="form-grid">
+                    <div class="form-left">
+                        <input type="text" id="task-title" placeholder="Task title..." required>
+                        <textarea id="task-description" placeholder="Description (optional)..." rows="3"></textarea>
+                    </div>
+                    <div class="form-right">
+                        <div class="form-row">
+                            <select id="task-priority">
+                                <option value="low">Low Priority</option>
+                                <option value="medium" selected>Medium Priority</option>
+                                <option value="high">High Priority</option>
+                            </select>
+                            <select id="task-category">
+                                <option value="General">General</option>
+                                <option value="Work">Work</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Health">Health</option>
+                                <option value="Learning">Learning</option>
+                            </select>
+                        </div>
+                        <input type="date" id="task-due-date">
+                    </div>
+                </div>
+                <button onclick="addTask()" class="btn btn-primary">Add Task</button>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterTasks('all')">All (<span id="all-count">0</span>)</button>
+                    <button class="filter-btn" onclick="filterTasks('active')">Active (<span id="active-count">0</span>)</button>
+                    <button class="filter-btn" onclick="filterTasks('completed')">Completed (<span id="completed-count">0</span>)</button>
+                </div>
+                <select id="category-filter" onchange="filterByCategory()">
+                    <option value="all">All Categories</option>
+                    <option value="General">General</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Health">Health</option>
+                    <option value="Learning">Learning</option>
+                </select>
+            </div>
+
+            <!-- Task List -->
+            <div id="task-list" class="task-list">
+                <!-- Tasks will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Analytics Tab Content -->
+        <div id="analytics-tab" class="tab-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <div class="stat-number" id="total-tasks">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <div class="stat-number completed" id="completed-tasks">0</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="completion-progress"></div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <h3>Overdue</h3>
+                    <div class="stat-number overdue" id="overdue-tasks">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Completion Rate</h3>
+                    <div class="stat-number" id="completion-rate">0%</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Tasks by Priority</h3>
+                    <div class="priority-chart">
+                        <div class="priority-item">
+                            <span class="priority-dot high"></span>
+                            <span>High Priority</span>
+                            <span class="priority-count" id="high-priority-count">0</span>
+                        </div>
+                        <div class="priority-item">
+                            <span class="priority-dot medium"></span>
+                            <span>Medium Priority</span>
+                            <span class="priority-count" id="medium-priority-count">0</span>
+                        </div>
+                        <div class="priority-item">
+                            <span class="priority-dot low"></span>
+                            <span>Low Priority</span>
+                            <span class="priority-count" id="low-priority-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Tasks by Category</h3>
+                    <div id="category-chart" class="category-chart">
+                        <!-- Category stats will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
