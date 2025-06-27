@@ -35,6 +35,13 @@ It allows users to manage tasks efficiently — with added features like **task 
 - **Vanilla JavaScript (ES6+)**
 
 ---
+🧠 What I Learned
+DOM manipulation with JavaScript
 
-## 📂 Folder Structure
+Structuring vanilla JS projects cleanly
 
+Creating user feedback with dynamic classes
+
+Implementing simple data logic for analytics
+
+Enhancing UX with priorities and task tracking
