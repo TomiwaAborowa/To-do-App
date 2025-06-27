@@ -24,7 +24,7 @@ It allows users to manage tasks efficiently — with added features like **task 
 
 ## 📸 Preview
 
-![Todo App Screenshot](./screenshot.png) <!-- Optional: add a real screenshot of your app -->
+![Todo App Screenshot](./Screenshot 2025-06-27 032019.png) <!-- Optional: add a real screenshot of your app -->
 
 ---
 
