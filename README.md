@@ -35,7 +35,7 @@ It allows users to manage tasks efficiently — with added features like **task 
 - **Vanilla JavaScript (ES6+)**
 
 ---
-🧠 What I Learned
+## 🧠 What I Learned
 DOM manipulation with JavaScript
 
 Structuring vanilla JS projects cleanly
